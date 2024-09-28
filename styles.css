@@ -1,0 +1,193 @@
+.tab {
+    display: inline-block;
+    width: 600px; /* Largura ajustável conforme necessário */
+    padding: 20px;
+    border: 10px solid #0d1bdd;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-family: "Century Gothic", sans-serif; 
+    font-size: 30px; /* Ajuste o tamanho da fonte conforme necessário */
+    color: rgb(4, 31, 180);
+   
+
+}
+
+/* Estilo para os botões */
+.tab-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+/* Estilo para o resultado */
+#resultado-soma, #resultado-gmv {
+    margin-top: 10px;
+    font-weight: bold;
+}
+/* Estilos CSS anteriores */
+
+.tab {
+    /* ... (outros estilos) */
+    width: 600px; /* Defina a largura da aba */
+    padding: 30px;
+    border: 10px solid #1d1af1;
+    border-radius: 20px;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: none; /* Começa escondida */
+}
+
+.tab.active {
+    display: block; /* Mostra a aba ativa */
+}
+/* Seu estilo CSS aqui */
+.day-option {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.day-label {
+    display: block;
+    text-align: center;
+}
+
+
+
+/* Seu estilo CSS aqui */
+body {
+    font-family: "Aprova Sans", sans-serif;
+}
+
+.tab {
+    /* Resto dos estilos da aba */
+    font-family: "Aprova Sans", sans-serif;
+}
+
+/* Estilo para os rótulos dos dias da semana */
+.day-label {
+    /* Resto dos estilos para os rótulos */
+    font-family: "Aprova Sans", sans-serif;
+}
+
+.spacer {
+    height: 20px;
+}
+.tab {
+    /* Estilos da aba */
+    width: 600px;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #caf0f1; /* Cor de fundo azul claro */
+}
+button {
+    background-color: #2196F3; /* Cor de fundo azul */
+    color: #fff; /* Cor do texto branco */
+    border:  2px solid #0f0cc0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+select {
+    background-color: #2196F3;
+    color: #fff;
+    border: 2px solid #0f0cc0;
+    padding: 10px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#ticket-medio {
+    width: 100px; /* Largura desejada */
+    padding: 8px;
+    font-size: 16px;
+    border: 2px solid #0f0cc0; /* Cor da borda */
+    border-radius: 5px; /* Cantos arredondados */
+    background-color: #2196F3; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+
+}
+#ticket-medio::before {
+    content: "R$ ";
+    left: 10px; /* Ajuste o valor conforme necessário */
+}
+
+.custom-input{
+    background-color: #2196F3;
+    padding: 8px;
+    border: 2px solid #0f0cc0;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #fff;
+}
+.bold-label {
+    font-weight: bold;
+}
+.tab {
+    /* Restante do seu estilo para a caixa da calculadora */
+    position: relative;
+}
+
+.calcular-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+input[type="checkbox"] {
+    /* Estilizar a aparência básica da caixa de seleção */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 8px solid #f4f4f8#0f0cc0; /* Borda da caixa de seleção */
+    border-radius: 50%; /* Bordas arredondadas */
+    background-color: #25cdeb; /* Fundo da caixa de seleção */
+    cursor: pointer;
+    outline: none;
+}
+
+/* Estilizar a caixa de seleção quando marcada */
+input[type="checkbox"]:checked {
+    background-color: #0a0a0a;
+    border-color: #e8eeee;
+    border: 8px
+}
+
+/* Estilizar o rótulo associado à caixa de seleção */
+.day-label {
+    font-weight: bold;
+    margin-left: 10px; /* Espaçamento entre a caixa de seleção e o rótulo */
+}
+
+/* Estilizar a caixa de seleção quando o mouse está sobre ela */
+input[type="checkbox"]:hover {
+    border-color:#fff;
+}
+.day-option label.day-label {
+    font-size: 10px; /* Tamanho de fonte menor */
+}
+/* Estilo para os dias da semana */
+.day-option {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 20px; /* Espaço entre cada dia da semana */
+}
+
+.day-option input[type="checkbox"] {
+    margin-right: 5px; /* Espaço entre a caixa de seleção e o texto */
+}
+
+.day-option label.day-label {
+    font-size: 12px;
+    margin: 0; /* Remova as margens para alinhar o texto verticalmente */
+}

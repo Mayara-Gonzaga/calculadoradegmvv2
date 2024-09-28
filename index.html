@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora de GMV</title>
+    <script src="script.js"></script>
+    <style>
+      
+
+
+ /* Centralizar a calculadora na tela */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #8cdcf7; /* Cor de fundo clara */
+}
+
+body {
+    font-family: "Aprova Sans", sans-serif;
+}
+
+.tab {
+    /* Resto dos estilos da aba */
+    font-family: "Aprova Sans", sans-serif;
+}
+
+/* Estilo para os rótulos dos dias da semana */
+.day-label {
+    /* Resto dos estilos para os rótulos */
+    font-family: "Aprova Sans", sans-serif;
+}
+
+/* Estilo da calculadora (tab) */
+.tab {
+    width: 600px; /* Ajuste conforme necessário */
+    padding: 30px;
+    border: 2px solid #ffa600;
+    border-radius: 1px;
+    margin: 1px;
+    box-shadow: 0 2px 4px rgba(28, 64, 129, 0.1);
+    background-color: #ffffff; /* Fundo branco */
+    text-align: center; /* Centralizar conteúdo da calculadora */
+}
+
+/* Estilo do título */
+h1 {
+    font-family: "Century Gothic", sans-serif;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    background-color: #000000; /* Fundo cinza */
+    color: #fff; /* Texto branco */
+    padding: 10px;
+    margin: 0; /* Remover margens */
+    border-radius: 10px;
+}
+
+#publico-estimado{
+width: 100px; /* Largura desejada */
+    padding: 8px;
+    font-size: 16px;
+    background-color: #0096ff;
+    border: 1px solid ; /* Cor da borda */
+    border-radius: 5px; /* Cantos arredondados */
+    background-color: #5a95b3; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+}
+
+/* Estilo para os inputs de texto */
+input[type="text"], select {
+    width: 100%; /* Largura total do campo */
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #0096ff;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #5a95b3; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+}
+
+/* Estilo para os botões */
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #ff7b00;
+}
+
+/* Estilo específico para o botão de limpar */
+.btn-clear {
+    background-color: #007bff;
+}
+
+.btn-clear:hover {
+    background-color: #ff7b00;
+}
+
+/* Estilo da caixa de resultado */
+.resultado-container {
+    width: 580px;
+    height: 100px;
+    background-color: #5a95b3; /* Cor de fundo */
+    color: #fff;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Estilo para as opções dos dias da semana */
+.day-option {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.day-label {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Estilo para as caixas de seleção (checkbox) */
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    background-color: #5a95b3; /* Cor de fundo */
+    border: 2px solid ;
+    border-radius: 30%;
+    background-color: #5a95b3; /* Cor de fundo */
+    cursor: pointer;
+    outline: none;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #eee5e5;
+}
+
+input[type="checkbox"]:hover {
+    border-color: #fff;
+}
+
+/* Estilo para os dias da semana */
+.day-option label.day-label {
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+/* Espaçamento */
+.spacer {
+    height: 20px;
+}
+
+/* Estilo geral da aba */
+.tab {
+    display: inline-block;
+    padding: 30px;
+    border-radius: 20px;
+    margin: 10px;
+    background-color: #ffffff; /* Cor de fundo branco */
+    box-shadow: 0 2px 4px rgba(28, 64, 129, 0.1);
+    text-align: center; /* Centralizar todo o conteúdo */
+    position: relative;
+}
+
+
+        
+    </style>
+</head>
+<body>
+
+    
+    <div id="aba2" class="tab">
+
+        <div class="spacer"></div> 
+        
+        <label><strong><span class="label-text">Público Estimado:</span></strong></label>
+        <input type="number" id="publico-estimado" step="1" class="custom-input">
+        
+        <div class="spacer"></div> 
+        
+        <!-- Espaço aqui -->
+        
+        <label><strong>
+        </strong></label>
+        <div id="dias-semana">
+            <div id="dias-semana">
+                <div class="day-option">
+                    <input type="checkbox" id="seg" value="2">
+                    <label class="day-label" for="seg">Seg</label>
+                </div>
+                <div class="day-option">
+                    <input type="checkbox" id="ter" value="3">
+                    <label class="day-label" for="ter">Ter</label>
+                </div>
+                <div class="day-option">
+                    <input type="checkbox" id="qua" value="4">
+                    <label class="day-label" for="qua">Qua</label>
+                </div>
+                <div class="day-option">
+                    <input type="checkbox" id="qui" value="5">
+                    <label class="day-label" for="qui">Qui</label>
+                </div>
+                <div class="day-option">
+                    <input type="checkbox" id="sex" value="6">
+                    <label class="day-label" for="sex">Sex</label>
+                </div>
+                <div class="day-option">
+                    <input type="checkbox" id="sab" value="7">
+                    <label class="day-label" for="sab">Sáb</label>
+                </div>
+                <div class="day-option">
+                    <input type="checkbox" id="dom" value="1">
+                    <label class="day-label" for="dom">Dom</label>
+                </div>
+                <div class="day-option">
+                    <input type="checkbox" id="zero" value="0">
+                    <label class="day-label" for="dom">Only</label>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="spacer"></div> 
+        <div class="spacer"></div> 
+        
+        <!-- Espaço aqui -->
+        
+        <label><strong><span class="label-text">Ticket Médio:</span></strong></label>
+        <input type="text" id="ticket-medio" step="0.01" value="R$ ">
+
+        
+        <div class="spacer"></div> 
+        <div class="spacer"></div> 
+        
+        <!-- Espaço aqui -->
+        
+        <label><strong><span class="label-text">Semanas:</span></strong></label>
+
+<select id="semanas-select">
+    <option value="0">Sem Valor</option>
+    <option value="1">1 semana</option>
+    <option value="2">2 semanas</option>
+    <option value="3">3 semanas</option>
+    <option value="4">4 semanas</option>
+</select>
+        
+<div class="spacer"></div>
+<div class="spacer"></div> 
+
+<!-- Espaço aqui -->
+
+<label><strong><span class="label-text">Meses:</span></strong></label>
+<select id="meses-select">
+    <option value="0">Sem Valor </option>
+    <option value="3">3 meses</option>
+    <option value="6">6 meses</option>
+    <option value="10">10 meses</option>
+    <option value="10">12 meses</option>
+</select>
+
+        
+<button class="calcular-btn" onclick="calcularSoma()">Calcular</button>
+
+<button class="btn-clear" onclick="limparCampos()">Limpar</button>
+
+<div class="resultado-container">
+        
+        <p id="resultado-soma"></p>
+        <p id="tipo-soma"></p>
+
+    </div>
+    
+    <script>
+      
+    </script>
+</body>
+</html>
